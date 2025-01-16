@@ -1,4 +1,4 @@
-# *KUBERNETES ON LOCAL*
+# *KUBERNETES EN LOCAL*
 
 Pour utiliser Kubernetes, il est essentiel de disposer d'une infrastructure permettant d'exécuter les composants du cluster, car Kubernetes a besoin d'un environnement pour orchestrer les conteneurs et gérer les ressources. Cet environnement peut être un serveur physique, une machine virtuelle ou une solution locale. Voici les options disponibles :
 
