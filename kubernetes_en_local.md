@@ -34,7 +34,7 @@ Pour ceux qui ne disposent pas de serveurs dédiés ou qui souhaitent expérimen
 ## **3. Installation des outils locaux**
 Avant d'installer un outil Kubernetes, assurez-vous d'avoir :
 
-1 - Docker :
+*1 - Docker :*
 Installez Docker sur votre système.
 Su macOS/Linux: `brew install docker`
 
