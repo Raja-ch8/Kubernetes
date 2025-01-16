@@ -154,4 +154,13 @@ minikube start --driver=docker
 ```
 <img width="783" alt="Screenshot 2025-01-16 alle 14 46 08" src="https://github.com/user-attachments/assets/f6afabf1-85c3-4b7b-a589-9af424c7a0c3" />
 
+- Une fois minikube start terminé, exécutez la commande ci-dessous pour vérifier l'état du cluster :
+
+```bash
+minikube status
+```
+<img width="201" alt="Screenshot 2025-01-16 alle 14 48 20" src="https://github.com/user-attachments/assets/a2010245-5aa2-424a-ac4f-5a054a1048f0" />
+
+
+
 
