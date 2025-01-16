@@ -34,26 +34,84 @@ Pour ceux qui ne disposent pas de serveurs dédiés ou qui souhaitent expérimen
 ## **3. Installation des outils locaux**
 Avant d'installer un outil Kubernetes, assurez-vous d'avoir :
 
-**1 - Docker :**
+## **1 - Installez Docker :**
 Installez Docker sur votre système macOS/Linux: `brew install docker`
 Installez Docker sur votre système Ubuntu:
 
-```bash
-# Add Docker's official GPG key:
-sudo apt-get update
-sudo apt-get install ca-certificates curl
-sudo install -m 0755 -d /etc/apt/keyrings
-sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-sudo chmod a+r /etc/apt/keyrings/docker.asc
+A) - Tout d'abord, il est nécessaire de mettre à jour le cache des paquets en exécutant
+la commande suivante avec des privilèges d'administrateur :
 
-# Add the repository to Apt sources:
-echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```bash
 sudo apt-get update
 ```
 
+B) - Exécutons la commande pour installer les paquets nécessaires suivants :
 
+```bash
+sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
+```
 
+C) - Vérifiez que l'installation a réussi en exécutant l'image hello-world :
+
+```bash
+La prochaine étape est d'ajouter le référentiel officiel de Docker à la machine
+virtuelle Debian 11 pour récupérer les sources d'installation, en commençant par
+obtenir la clé GPG pour assurer l'intégrité et l'authenticité des images Docker.
+```
+
+D) - Nous allons intégrer le référentiel Docker à la machine virtuelle Debian 11.
+
+```bash
+sudo echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-
+archive-keyring.gpg] https://download.docker.com/linux/debian $
+(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list
+```
+
+E) - Après avoir installé ces paquets, il est nécessaire d'exécuter la commande pour
+mettre à jour la cache des paquets.
+
+```bash
+sudo apt-get update
+```
+
+F) - Enfin, nous exécutons la commande pour installer Docker.
+
+```bash
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+```
+
+G) - Pour vérifier si Docker a été correctement installé, vous exécutez une commande
+pour vérifier l'état de Docker. La commande est la suivante :
+
+```bash
+sudo systemctl status docker
+```
+
+H) - Pour vérifier la version de Docker installée, vous pouvez le faire en utilisant la
+commande suivante :
+
+```bash
+docker version
+```
+
+## **2 - Installation de Kubernetes:**
+
+- Installer avec Homebrew sur macOS:
+
+```bash
+brew install kubectl
+ou
+brew install kubernetes-cli
+```
+
+- Testez pour vous assurer que la version que vous avez installée est à jour :
+
+```bash
+kubectl version --client
+```
+- Installer kubectl sur Linux :
+
+```bash
+
+```
 
