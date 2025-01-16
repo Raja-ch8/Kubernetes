@@ -96,7 +96,7 @@ docker version
 
 ## **2 - Installation de Kubernetes:**
 
-- Installer avec Homebrew sur macOS:
+1 - Installer avec Homebrew sur macOS:
 
 ```bash
 brew install kubectl
@@ -109,9 +109,49 @@ brew install kubernetes-cli
 ```bash
 kubectl version --client
 ```
-- Installer kubectl sur Linux :
+2 - Installer sur Linux (Debian-Ubuntu):
+
+*Mise à jour et installation des dépendances :*
 
 ```bash
-
+sudo apt update
+sudo apt -y upgrade
+sudo apt -y install curl apt-transport-https
 ```
+
+*Ajouter la clé GPG et le dépôt Kubernetes :
+
+```bash
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+sudo apt update
+```
+
+*Installer kubelet, kubeadm et kubectl:*
+
+```bash
+sudo apt -y install vim git curl wget kubelet kubeadm kubectl
+sudo apt-mark hold kubelet kubeadm kubectl
+```
+Cette commande installe les trois composants principaux :
+- `kubelet` : Agent pour exécuter les pods.
+- `kubeadm` : Outil pour initialiser un cluster Kubernetes.
+- `kubectl` : Outil de ligne de commande pour gérer Kubernetes.
+
+## **3 - Installation de Minikube:**
+```bash
+brew uninstall minikube
+```
+- Désinstaller Minikube:
+
+```bash 
+brew uninstall minikube
+```
+Pour définir le --driver avec minikube start, entrez le nom de l'hyperviseur que vous avez installé en minuscules: 
+
+```bash
+minikube start --driver=docker
+```
+<img width="783" alt="Screenshot 2025-01-16 alle 14 46 08" src="https://github.com/user-attachments/assets/f6afabf1-85c3-4b7b-a589-9af424c7a0c3" />
+
 
