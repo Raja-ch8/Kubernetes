@@ -9,10 +9,10 @@ Kubernetes est conçu pour gérer les conteneurs dans un cluster distribué. Cel
 **Serveurs virtuels** : Par exemple, des machines virtuelles hébergées sur VMware, Hyper-V ou dans le cloud.
 **Cloud** : Comme Google Kubernetes Engine (GKE), Amazon EKS ou Azure AKS.
 
-2. Solutions pour utiliser Kubernetes en local
+### **2. Solutions pour utiliser Kubernetes en local**
 Pour ceux qui ne disposent pas de serveurs dédiés ou qui souhaitent expérimenter Kubernetes facilement, il existe des solutions permettant de configurer et d'utiliser Kubernetes en local, en simulant un cluster sur une machine personnelle. Ces options sont idéales pour les développeurs et ceux qui souhaitent apprendre.
 
-** - Principales options pour un usage local :**
+**- Principales options pour un usage local :**
 
 **Minikube :**
 - Simule un cluster Kubernetes complet sur une machine locale.
@@ -30,3 +30,14 @@ Pour ceux qui ne disposent pas de serveurs dédiés ou qui souhaitent expérimen
 **k3s :**
 - Une distribution légère et simplifiée de Kubernetes.
 - Idéal pour les systèmes avec des ressources limitées.
+
+## **3. Installation des outils locaux**
+Avant d'installer un outil Kubernetes, assurez-vous d'avoir :
+
+1 - Docker :
+Installez Docker sur votre système.
+Su macOS/Linux: `brew install docker`
+
+
+
+
