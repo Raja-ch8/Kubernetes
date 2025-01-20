@@ -166,3 +166,33 @@ NB. Pour que Minikube fonctionne avec Docker comme driver, il est nécessaire qu
 ---
 ### **1. Créer Namespace**
 
+Il y a deux méthodes pour créer un espace de noms, et elles sont les suivantes :
+
+1°: Avec le fichier yaml
+
+```yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+   name: development
+```
+```bash
+kubectl apply -f namespace.yaml
+```
+
+2°: Vous pouvez créer un espace de noms directement depuis la ligne de commande en utilisant la commande `kubectl`:
+
+```bash
+kubectk create namespace development
+```
+```bash
+kubectl create namespace NOME_NAMESPACE
+```
+
+
+
+
+
+
+
+
