@@ -183,14 +183,15 @@ kubectl apply -f namespace.yaml
 2°: Vous pouvez créer un espace de noms directement depuis la ligne de commande en utilisant la commande `kubectl`:
 
 ```bash
-kubectk create namespace development
-```
-```bash
 kubectl create namespace NOME_NAMESPACE
 ```
 
+Pour lister les `namespace` exécutez la commande suivante
+```bash
+kubectl get namespace 
+```
 
-
+<img width="366" alt="Screenshot 2025-01-20 alle 12 10 33" src="https://github.com/user-attachments/assets/506302c1-1893-4260-b789-12740ae841cd" />
 
 
 
