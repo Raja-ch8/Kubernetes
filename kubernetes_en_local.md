@@ -161,6 +161,8 @@ minikube status
 ```
 <img width="201" alt="Screenshot 2025-01-16 alle 14 48 20" src="https://github.com/user-attachments/assets/a2010245-5aa2-424a-ac4f-5a054a1048f0" />
 
+NB. Pour que Minikube fonctionne avec Docker comme driver, il est nécessaire que Docker soit en cours d'exécution (en start).
 
-
+---
+### **1. Créer Namespace**
 
